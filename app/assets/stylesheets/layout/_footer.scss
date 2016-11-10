@@ -1,1 +1,23 @@
-// Your footer style
+.wrapper-black{
+  background-color: #3F3F3F;
+  padding: 10px 0;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.social-media-icons, .links-extra{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer a {
+  color: white;
+  padding: 5px 10px;
+  transition: color 0.5s;
+}
+.footer a:hover {
+  color: #EEE60B;
+  text-decoration: none;
+}
