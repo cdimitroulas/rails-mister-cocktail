@@ -1,20 +1,22 @@
 <div class="row text-center">
   <h1>Add an instruction</h1>
 </div>
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-<div class="row">
-  <div class="col-xs-offset-3 col-xs-6">
-  <%= f.input :description %>
+<div class="div-form">
+  <%= simple_form_for [@cocktail, @dose] do |f| %>
+  <div class="row">
+    <div class="col-xs-offset-3 col-xs-6">
+    <%= f.input :description %>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-offset-3 col-xs-6">
-    <%= f.input :ingredient_id, collection: Ingredient.all %>
+  <div class="row">
+    <div class="col-xs-offset-3 col-xs-6">
+      <%= f.input :ingredient_id, collection: Ingredient.all %>
+    </div>
   </div>
-</div>
-<div class="row">
-  <div class="col-xs-offset-3 col-xs-6">
-    <%= f.submit %>
+  <div class="row">
+    <div class="col-xs-offset-3 col-xs-6">
+      <%= f.submit %>
+    </div>
   </div>
+  <% end %>
 </div>
-<% end %>
