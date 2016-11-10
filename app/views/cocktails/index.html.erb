@@ -16,8 +16,10 @@
             url(<%= image_path(url) %>)">
             <span class="card-cocktail"><%= cocktail.name %></span>
             <div class="card-creator">
-              <h5><%= cocktail.user.first_name %></h5>
-              <p>Created at: <%= cocktail.user.created_at %></p>
+              <% if cocktail.user %>
+                <h5><%= cocktail.user.first_name %></h5>
+                <p>Created at: <%= cocktail.user.created_at %></p>
+              <% end %>
             </div>
           </div>
        </div>
