@@ -4,13 +4,15 @@ class DosesController < ApplicationController
 
   def new
     @dose = @cocktail.doses.build
-    @ingredients_array = Ingredient.all.to_a
   end
 
   def create
     @dose = @cocktail.doses.build(dose_params)
-    @dose.save
-    redirect_to cocktail_path(@cocktail)
+    if @dose.save
+      redirect_to cocktail_path(@cocktail)
+    else
+      render action: :new, dose: @dose
+    end
   end
 
   def destroy
