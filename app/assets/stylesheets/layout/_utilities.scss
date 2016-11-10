@@ -24,10 +24,12 @@
   background: #3b5998;
 }
 .wrapper-green-light {
-  background: radial-gradient(rgba(240,240,240,0.2) 52%, $blue-dark-scheme-tslcnt 108%);
   padding: 30px 0;
   min-height: 95vh;
 }
-.wrapper-pink {
-  background-color: $brown-scheme;
+.wrapper-blue {
+  background-color: $blue-dark-scheme;
+}
+.bg-image {
+  background-size: cover;
 }

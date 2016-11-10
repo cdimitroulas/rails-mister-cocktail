@@ -1,13 +1,15 @@
 .card {
   background-size: cover;
+  border-radius: 5px;
   height: 200px;
   position: relative;
   color: #FFFFFF;
   margin-top: 20px;
   transition: opacity 1s;
+  border: 2px solid rgba(20,20,20,0.2);
 }
 .card:hover{
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .card-cocktail {
   position: absolute;
