@@ -1,0 +1,31 @@
+<div class="row">
+  <h4> <%= @user.first_name %> - welcome to your Dashboard</h4>
+</div>
+<div class="row text-center">
+  <h2>My Cocktails</h2>
+</div>
+<div class="row text-center">
+  <div class="div-btn">
+    <%= link_to "Create your own cocktail", new_cocktail_path, class: "btn btn-success btn-lg" %>
+  </div>
+</div>
+<div class="row">
+  <% @my_cocktails.each do |cocktail| %>
+    <%= link_to cocktail_path(cocktail) do %>
+      <% url = cocktail.url %>
+      <% url = "cocktailHD.jpg" if url.blank? %>
+      <div class="col-xs-6 col-sm-3">
+        <div class="card" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%),
+            url(<%= image_path(url) %>)">
+            <span class="card-cocktail"><%= cocktail.name %></span>
+            <div class="card-creator">
+              <% if cocktail.user %>
+                <h5><%= cocktail.user.first_name %></h5>
+                <p>Created at: <%= cocktail.user.created_at %></p>
+              <% end %>
+            </div>
+          </div>
+       </div>
+     <% end %>
+  <% end %>
+</div>

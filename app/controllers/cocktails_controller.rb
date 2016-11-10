@@ -25,6 +25,10 @@ class CocktailsController < ApplicationController
     end
   end
 
+  def dashboard
+    @my_cocktails = Cocktail.where("user_id = #{@user.id}")
+  end
+
   private
 
   def cocktail_params

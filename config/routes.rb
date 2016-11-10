@@ -12,13 +12,11 @@ Rails.application.routes.draw do
   # on the doses#new form after making a mistake
   get 'cocktails/:cocktail_id/doses', to: 'doses#new'
 
+
+  # Routes for current user to allow editing of their own cocktails
   namespace :current_user do
     resources :cocktails, only: [:edit, :update, :destroy]
   end
-
-
-
-
 
   # Used for signing up a new user
   get "/signup", to: 'users#new'
@@ -28,4 +26,7 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   get '/logout', to: 'sessions#destroy'
+
+  # Extra routes/filters/dashboard etc.
+  get "/dashboard", to: "cocktails#dashboard"
 end
