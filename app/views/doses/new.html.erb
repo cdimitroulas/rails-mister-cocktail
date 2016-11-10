@@ -5,12 +5,12 @@
   <%= simple_form_for [@cocktail, @dose] do |f| %>
   <div class="row">
     <div class="col-xs-offset-3 col-xs-6">
-    <%= f.input :description %>
+      <%= f.input :ingredient_id, collection: Ingredient.order(:name) %>
     </div>
   </div>
   <div class="row">
     <div class="col-xs-offset-3 col-xs-6">
-      <%= f.input :ingredient_id, collection: Ingredient.order(:name) %>
+    <%= f.input :description %>
     </div>
   </div>
   <div class="row">
