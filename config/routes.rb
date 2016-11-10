@@ -5,9 +5,20 @@ Rails.application.routes.draw do
   resources :cocktails, only: [:index, :show, :new, :create] do
     resources :doses, only: [:new, :create]
   end
-
-  get 'cocktails/:cocktail_id/doses', to: 'doses#new'
+  # Destroy route for doses
   resources :doses, only: [:destroy]
+
+  # This route prevents program crashing if user reloads the page
+  # on the doses#new form after making a mistake
+  get 'cocktails/:cocktail_id/doses', to: 'doses#new'
+
+  namespace :current_user do
+    resources :cocktails, only: [:edit, :update, :destroy]
+  end
+
+
+
+
 
   # Used for signing up a new user
   get "/signup", to: 'users#new'

@@ -1,6 +1,11 @@
 <div class="row text-center">
   <h1><%= @cocktail.name %></h1>
 </div>
+<% if @user.id == @cocktail.user_id %>
+<div class="row text-center">
+  <%= link_to "Edit your cocktail", edit_current_user_cocktail_path(@cocktail), class: "btn btn-primary" %>
+</div>
+<% end %>
 <% if @cocktail.doses[0] %>
   <div class="padded">
     <div class="row">
