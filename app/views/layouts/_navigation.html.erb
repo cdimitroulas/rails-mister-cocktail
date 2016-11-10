@@ -8,7 +8,7 @@
       </div>
       <% unless controller_name == "sessions" || controller_name == "users" %>
         <div class="links">
-          link
+          <%= link_to "Logout", logout_path %>
         </div>
       <% end %>
     </div>

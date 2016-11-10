@@ -1,2 +1,18 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div class="container">
+  <div class="form">
+    <%= simple_form_for :user, url:'/users' do |f| %>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <h1>Signup to Yelp!</h1>
+        </div>
+      </div>
+      <%= f.error_notification %>
+      <%= f.input :first_name %>
+      <%= f.input :last_name %>
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.input :password_confirmation %>
+      <%= f.submit "Submit", class: "btn btn-primary btn-lg" %>
+    <% end %>
+  </div>
+</div>

@@ -1,5 +1,7 @@
 class DosesController < ApplicationController
 
+  before_action :require_login
+  before_action :set_user
   before_action :set_cocktail, only: [:new, :create]
 
   def new

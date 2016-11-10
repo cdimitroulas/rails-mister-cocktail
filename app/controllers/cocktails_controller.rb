@@ -1,5 +1,8 @@
 class CocktailsController < ApplicationController
 
+  before_action :require_login
+  before_action :set_user
+
   def index
     @cocktails = Cocktail.all
   end

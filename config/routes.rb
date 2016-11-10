@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root 'cocktails#index'
+  root to: 'cocktails#index'
 
   resources :cocktails, only: [:index, :show, :new, :create] do
     resources :doses, only: [:new, :create]
@@ -10,8 +10,11 @@ Rails.application.routes.draw do
   resources :doses, only: [:destroy]
 
   # Used for signing up a new user
-  resources :users, only: [:new, :create]
+  get "/signup", to: 'users#new'
+  post "/users", to: 'users#create'
 
   # Used for logging in and out
-  resources :sessions, only: [:new, :create, :destroy]
+  get "/login", to: "sessions#new"
+  post "/login", to: "sessions#create"
+  get '/logout', to: 'sessions#destroy'
 end
