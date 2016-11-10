@@ -1,0 +1,27 @@
+.card {
+  background-size: cover;
+  height: 200px;
+  position: relative;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+
+.card-user {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.card-cocktail {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 25px
+}
+
+.card-creator {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 10px;
+}

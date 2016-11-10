@@ -1,0 +1,16 @@
+<div class="wrapper-pink">
+  <div class="container">
+    <div class="navigation-bar">
+      <div class="logo">
+        <%= link_to root_path do %>
+          <%= icon('glass') %>
+        <% end %>
+      </div>
+      <% unless controller_name == "sessions" || controller_name == "users" %>
+        <div class="links">
+          link
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

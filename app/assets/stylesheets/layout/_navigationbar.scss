@@ -1,0 +1,17 @@
+.navigation-bar{
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  font-size: 25px;
+  color: white;
+}
+.navigation-bar a{
+  color: white;
+}
+.navigation-bar a:hover{
+  text-decoration: none;
+  position: relative;
+  top: 2px;
+}
