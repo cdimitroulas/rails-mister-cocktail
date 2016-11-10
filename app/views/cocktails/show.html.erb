@@ -1,0 +1,17 @@
+<h1><%= @cocktail.name %></h1>
+
+
+<% if @cocktail.doses %>
+  Method
+  <ul>
+    <% @cocktail.doses.each do |dose|%>
+      <li>
+        <p><%= dose.description %></p>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= link_to "Home", root_path %>
+
+<!-- INSERT AN EMBEDDED FORM TO CREATE DOSES -->
