@@ -2,26 +2,34 @@
   <h1><%= @cocktail.name %></h1>
 </div>
 <% if @cocktail.doses[0] %>
-  <div class="row">
-    <div class="container">
-      <div class="row">
-          <div class="col-xs-offset-2 col-xs-8">
-            <h4> Method </h4>
-          </div>
-      </div>
-      <% @cocktail.doses.each do |dose|%>
-        <div class="row" id="row-dose">
-          <div class="col-xs-offset-2 col-xs-4">
-            <p><%= dose.description %></p>
-          </div>
-          <div class="col-xs-4">
-            <%= link_to "Delete", dose_path(dose),
-                  method: :delete,
-                  data: { confirm: "Are you sure?" },
-                  class: "btn btn-danger", id: "btn-delete" %>
-          </div>
+  <div class="padded">
+    <div class="row">
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-offset-2 col-xs-4">
+              <h4> Ingredients </h4>
+            </div>
+            <div class=" col-xs-6">
+              <h4> Instructions </h4>
+            </div>
         </div>
-      <% end %>
+        <% @cocktail.doses.each do |dose|%>
+          <div class="row" id="row-dose">
+            <div class="col-xs-offset-2 col-xs-4">
+                <p><%= dose.ingredient.name %></p>
+            </div>
+            <div class="col-xs-4">
+              <p><%= dose.description %></p>
+            </div>
+            <div class="col-xs-2">
+              <%= link_to "Delete", dose_path(dose),
+                    method: :delete,
+                    data: { confirm: "Are you sure?" },
+                    class: "btn btn-danger", id: "btn-delete" %>
+            </div>
+          </div>
+        <% end %>
+      </div>
     </div>
   </div>
 <% end %>
