@@ -1,5 +1,19 @@
-<h1>Create your new cocktail</h1>
-<%= simple_form_for @cocktail do |f| %>
-  <%= f.input :name %>
-  <%= f.submit %>
-<% end %>
+<div class="row text-center">
+  <h1>Create your new cocktail</h1>
+</div>
+<div class="div-form">
+  <%= simple_form_for @cocktail do |f| %>
+    <div class="row">
+      <div class="col-xs-offset-3 col-xs-6">
+        <%= f.input :name %>
+      </div>
+    </div>
+    <div class="row text-center">
+      <div class="col-xs-offset-3 col-xs-6">
+        <div class="div-btn">
+          <%= f.button :submit, class: "btn btn-primary" %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

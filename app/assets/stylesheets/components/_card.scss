@@ -4,8 +4,12 @@
   position: relative;
   color: #FFFFFF;
   margin-top: 20px;
+  transition: opacity 1s;
 }
 
+.card:hover{
+  opacity: 0.5;
+}
 .card-user {
   position: absolute;
   top: 10px;

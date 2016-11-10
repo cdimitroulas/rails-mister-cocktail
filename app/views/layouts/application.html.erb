@@ -14,7 +14,13 @@
   <body class="<%= controller_name %> <%= action_name %>">
 
     <%= render "layouts/navigation" %>
-    <%= yield %>
+
+    <div class="wrapper-green-light">
+      <div class="container">
+        <%= yield %>
+      </div>
+    </div>
+
     <%= render "layouts/footer" %>
 
   </body>
