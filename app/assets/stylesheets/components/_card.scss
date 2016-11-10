@@ -6,23 +6,15 @@
   margin-top: 20px;
   transition: opacity 1s;
 }
-
 .card:hover{
   opacity: 0.5;
 }
-.card-user {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-}
-
 .card-cocktail {
   position: absolute;
   top: 10px;
-  left: 10px;
+  right: 10px;
   font-size: 25px
 }
-
 .card-creator {
   position: absolute;
   bottom: 10px;
