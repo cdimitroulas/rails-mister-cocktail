@@ -1,0 +1,16 @@
+<%= link_to cocktail_path(cocktail) do %>
+  <div class="col-xs-6 col-sm-3">
+    <div class="card" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%),
+        url(<%= set_background(cocktail.photo) %>)">
+        <span class="card-cocktail"><%= cocktail.name %></span>
+        <div class="card-creator">
+          <% if cocktail.user %>
+            <h5><%= cocktail.user.first_name %></h5>
+            <p>Created at: <%= cocktail.user.created_at %></p>
+          <% end %>
+        </div>
+      </div>
+   </div>
+<% end %>
+
+

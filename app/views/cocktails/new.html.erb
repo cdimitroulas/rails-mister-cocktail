@@ -10,8 +10,12 @@
     </div>
     <div class="row">
       <div class="col-xs-offset-3 col-xs-6">
-        <%= f.input :url, label: "Enter a url with an image of the cocktail" %>
+        <%= f.input :photo %>
       </div>
+    </div>
+
+    <%= f.input :photo_cache, as: :hidden %>
+
     </div>
     <div class="row text-center">
       <div class="col-xs-offset-3 col-xs-6">
