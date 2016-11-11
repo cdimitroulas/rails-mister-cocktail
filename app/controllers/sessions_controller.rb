@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:user][:password])
       session[:current_user_id] = @user.id
       session[:guest] = nil
-      redirect_to root_path
+      redirect_to cocktails_path
     else
       redirect_to login_path
     end
@@ -18,7 +18,7 @@ class SessionsController < ApplicationController
 
   def guest_create
     session[:guest] = true
-    redirect_to root_path
+    redirect_to cocktails_path
   end
 
   def destroy

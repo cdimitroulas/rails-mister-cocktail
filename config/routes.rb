@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  root to: 'cocktails#index'
+  root to: 'sessions#new'
 
   resources :cocktails, only: [:index, :show, :new, :create] do
     resources :doses, only: [:new, :create]
@@ -26,6 +26,8 @@ Rails.application.routes.draw do
   get "/login", to: "sessions#new"
   post "/login", to: "sessions#create"
   get '/logout', to: 'sessions#destroy'
+  # signin as guest
+  get '/guest', to: 'sessions#guest_create'
 
 
   # Extra routes/filters/dashboard etc.
