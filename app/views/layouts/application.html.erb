@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
   </head>
 
   <body class="<%= controller_name %> <%= action_name %>">
@@ -17,11 +18,15 @@
 
     <div class="wrapper-green-light bg-image" style="background-image: linear-gradient(135deg, rgba(200,200,200,0.5) 71%, rgba(109,196,138,0.4) 100%), url(<%= image_path("background2.jpg") %>)">
       <div class="container <%= action_name %>">
+
         <%= yield %>
+
       </div>
     </div>
 
     <%= render "layouts/footer" %>
 
+
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

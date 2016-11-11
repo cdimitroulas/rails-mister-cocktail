@@ -27,6 +27,7 @@ Rails.application.routes.draw do
   post "/login", to: "sessions#create"
   get '/logout', to: 'sessions#destroy'
 
+
   # Extra routes/filters/dashboard etc.
   get "/dashboard", to: "cocktails#dashboard"
 end

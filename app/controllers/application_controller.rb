@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   private
 
   def require_login
-    unless session[:current_user_id]
+    unless session[:current_user_id] || session[:guest]
       redirect_to login_path
     end
   end
