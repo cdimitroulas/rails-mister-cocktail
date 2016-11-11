@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  layout "layouts/landinglayout"
+
   def new
     @user = User.new
   end
