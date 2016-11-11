@@ -39,6 +39,7 @@ gem 'figaro'
 
 # Image Upload
 gem 'cloudinary'
+gem 'carrierwave'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
