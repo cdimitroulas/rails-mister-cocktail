@@ -1,10 +1,10 @@
+ruby '2.3.1'
+
 source 'https://rubygems.org'
 
-ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
-# Use sqlite3 as the database for Active Record
-# gem 'sqlite3'
+# Use postgresql as the database for Active Record
 gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -33,6 +33,12 @@ gem 'bootstrap-sass'
 gem 'font-awesome-sass'
 gem 'simple_form'
 gem 'autoprefixer-rails'
+
+# Security for API keys in application.yml
+gem 'figaro'
+
+# Image Upload
+gem 'cloudinary'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
