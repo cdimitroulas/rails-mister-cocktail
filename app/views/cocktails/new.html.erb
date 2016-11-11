@@ -2,27 +2,29 @@
   <h1>Create your new cocktail</h1>
 </div>
 <div class="div-form">
-  <%= simple_form_for @cocktail do |f| %>
-    <div class="row">
-      <div class="col-xs-offset-3 col-xs-6">
-        <%= f.input :name %>
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-xs-offset-3 col-xs-6">
-        <%= f.input :photo %>
-      </div>
-    </div>
-
-    <%= f.input :photo_cache, as: :hidden %>
-
-    </div>
-    <div class="row text-center">
-      <div class="col-xs-offset-3 col-xs-6">
-        <div class="div-btn">
-          <%= f.button :submit, class: "btn btn-primary" %>
+  <div class="container">
+    <%= simple_form_for @cocktail do |f| %>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <%= f.input :name %>
         </div>
       </div>
-    </div>
-  <% end %>
+      <div class="row">
+        <div class="col-xs-offset-3 col-xs-6">
+          <%= f.input :photo %>
+        </div>
+      </div>
+
+      <%= f.input :photo_cache, as: :hidden %>
+
+      </div>
+      <div class="row text-center">
+        <div class="col-xs-offset-3 col-xs-6">
+          <div class="div-btn">
+            <%= f.button :submit, class: "btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>
