@@ -1,0 +1,19 @@
+.banner {
+  height: 100vh;
+  background-size: cover;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.banner-content {
+  color: white;
+}
+.banner-content > a{
+  color: rgba(220,220,220,0.9);
+  transition: color 0.5s;
+}
+.banner-content > a:hover {
+  color: rgba(150,150,150,0.7);
+  text-decoration: none;
+}

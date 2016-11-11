@@ -1,0 +1,10 @@
+<div class="banner" style="background-image: linear-gradient(155deg, rgba(50,70,50,0.8) 70%, rgba(0,0,0,0.2) 100%), url(<%= image_path "background.jpg" %>)">
+  <div class="banner-content text-center">
+    <h1>Mister Cocktail</h1>
+    <p>Learn how to make your favourite cocktails</p>
+    <%= link_to "Create an account", signup_path, class: "btn btn-primary btn-lg", id: "btn-signup" %>
+    <%= link_to "#", id: "btn-login", 'data-toggle' => "modal", 'data-target' => "#myModal" do %>
+      <p id="btn-login">Already have an account? Log in here</p>
+    <% end %>
+  </div>
+</div>
