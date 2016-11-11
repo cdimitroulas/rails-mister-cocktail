@@ -12,11 +12,9 @@
 <div class="row">
   <% @my_cocktails.each do |cocktail| %>
     <%= link_to cocktail_path(cocktail) do %>
-      <% url = cocktail.url %>
-      <% url = "cocktailHD.jpg" if url.blank? %>
       <div class="col-xs-6 col-sm-3">
         <div class="card" style="background-image: linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 50%),
-            url(<%= image_path(url) %>)">
+            url(<%= set_background(cocktail.photo) %>)">
             <span class="card-cocktail"><%= cocktail.name %></span>
             <div class="card-creator">
               <% if cocktail.user %>

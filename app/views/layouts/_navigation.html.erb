@@ -7,7 +7,11 @@
       </div>
       <% unless controller_name == "sessions" || controller_name == "users" %>
         <div class="links">
+          <%= link_to "Home", root_path %>
         <% if session[:guest] %>
+          <%= link_to "#", id: "btn-login", 'data-toggle' => "modal", 'data-target' => "#myModal" do %>
+            Log In
+    <% end %>
           <%= link_to "Signup", signup_path %>
         <% else %>
           <%= link_to "Dashboard", dashboard_path %>
@@ -17,3 +21,5 @@
       <% end %>
     </div>
 </div>
+
+<%= render "/sessions/login_modal", user: User.new %>

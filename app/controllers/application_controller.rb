@@ -11,5 +11,6 @@ class ApplicationController < ActionController::Base
 
   def set_user
     @user = User.find_by_id(session[:current_user_id])
+    @user ||= User.new
   end
 end
